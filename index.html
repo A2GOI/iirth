@@ -1,494 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Institute of Research and Technology (IIRT), Hyderabad</title>
-    <!-- Tailwind CSS for modern, decent styling -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        html { scroll-behavior: smooth; }
-        @keyframes pulse-border {
-            0%, 100% { border-color: rgba(239, 68, 68, 0.7); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-            50% { border-color: rgba(220, 38, 38, 1); box-shadow: 0 0 12px 4px rgba(220, 38, 38, 0.2); }
-        }
-        .phd-alert { animation: pulse-border 2s infinite; }
-        /* Dropdown custom transition */
-        .menu-dropdown {
-            display: none;
-        }
-        .menu-dropdown.show {
-            display: block;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIRT Hyderabad</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;line-height:1.6}
+header{background:#0f172a;color:white;padding:60px 20px;text-align:center}
+nav{background:#1e293b;padding:12px;text-align:center}
+nav a{color:white;margin:0 12px;text-decoration:none}
+section{padding:50px 20px;max-width:1100px;margin:auto}
+.card{border:1px solid #ddd;padding:20px;border-radius:10px;margin:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+footer{background:#0f172a;color:white;text-align:center;padding:20px}
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
-
-    <!-- Top Bar -->
-    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 md:px-12 flex justify-between items-center border-b border-slate-800">
-        <div><i class="fa-solid fa-building-columns mr-1"></i> A Sub-group of A2 Group of Pvt. Limited</div>
-        <div class="space-x-4">
-            <a href="#anti-ragging" class="hover:text-red-400 transition">Anti-Ragging Cell</a>
-            <a href="#examination" class="hover:text-amber-400 transition">Examination Cell</a>
-        </div>
-    </div>
-
-    <!-- Main Navigation Header with Bilingual Titles and Three-Dot Menu -->
-    <header class="sticky top-0 z-50 bg-white shadow-md px-4 md:px-12 py-5 flex justify-between items-center gap-4">
-        <div class="flex items-center space-x-5">
-            <!-- Official Premium Sized IIRT Logo -->
-            <div class="flex items-center bg-white p-1 rounded-lg shadow-sm border border-slate-200 shrink-0">
-                <img src="1000182692.jpg" alt="IIRT Hyderabad Official Logo" class="h-24 w-24 object-contain">
-            </div>
-            <div class="space-y-1">
-                <h1 class="text-2xl md:text-3xl font-black text-indigo-950 tracking-tight leading-none uppercase">Indian Institute of Research and Technology</h1>
-                <!-- Hindi Translation styled bold and prominent like premium institutes -->
-                <h2 class="text-lg md:text-xl font-bold text-slate-700 tracking-wide font-sans leading-tight">भारतीय अनुसंधान एवं प्रौद्योगिकी संस्थान, हैदराबाद</h2>
-                <!-- Telugu Translation styled bold and prominent like premium institutes -->
-                <h2 class="text-base md:text-lg font-bold text-slate-600 tracking-wide font-sans leading-tight">భారతీయ పరిశోధన మరియు సాంకేతిక సంస్థ, హైదరాబాద్</h2>
-                <p class="text-xs md:text-sm font-bold text-amber-600 tracking-widest pt-1 uppercase">Center for Advanced Scientific Research &bull; Established 2026</p>
-            </div>
-        </div>
-        
-        <!-- Navigation Action Hub with Three-Dot dropdown -->
-        <div class="flex items-center space-x-4 relative">
-            <a href="#login" class="hidden sm:inline-flex bg-indigo-950 text-white px-5 py-2.5 rounded-md text-sm font-bold hover:bg-indigo-900 transition shadow-sm whitespace-nowrap"><i class="fa-solid fa-user-lock mr-2"></i>Student Login</a>
-            
-            <!-- Three-Dot Action Button -->
-            <button id="menuBtn" class="text-slate-700 hover:text-indigo-950 p-2.5 text-2xl focus:outline-none transition rounded-full hover:bg-slate-100" aria-label="Toggle Navigation Menu">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-
-            <!-- Institutional Navigation Dropdown Panel -->
-            <div id="menuDropdown" class="menu-dropdown absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200/80 py-2 z-50 animate-fadeIn">
-                <a href="#" class="flex items-center px-4 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-house mr-3 text-indigo-950 w-4"></i>Home Page</a>
-                <a href="#about" class="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-circle-info mr-3 text-indigo-950 w-4"></i>About Institute</a>
-                <a href="#governance" class="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-gavel mr-3 text-indigo-950 w-4"></i>Governance</a>
-                <a href="#programs" class="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-graduation-cap mr-3 text-indigo-950 w-4"></i>Academic Programs</a>
-                <a href="#admissions" class="flex items-center px-4 py-2.5 text-sm font-bold text-red-600 hover:bg-red-50 transition"><i class="fa-solid fa-door-open mr-3 text-red-600 w-4"></i>Admission Desk Portal</a>
-                <a href="#faculty" class="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-user-tie mr-3 text-indigo-950 w-4"></i>Faculty Directory</a>
-                <a href="#fees" class="flex items-center px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:text-indigo-950 transition"><i class="fa-solid fa-indian-rupee-sign mr-3 text-indigo-950 w-4"></i>Fee Structure</a>
-                <div class="border-t border-slate-100 my-1 sm:hidden"></div>
-                <a href="#login" class="flex sm:hidden items-center px-4 py-2.5 text-sm font-bold text-indigo-950 hover:bg-slate-50 transition"><i class="fa-solid fa-user-lock mr-3 w-4"></i>Student Login</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Ph.D. Admission Advertisement Banner linked to the verbatim file name -->
-    <div class="bg-red-50 border-y phd-alert border-l-0 border-r-0 py-3 px-4 md:px-12">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center space-x-3 text-center sm:text-left">
-                <span class="bg-red-600 text-white text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded animate-pulse">Live Notification</span>
-                <p class="text-sm font-bold text-red-950">
-                    Ph.D. Admissions Open (Autumn Semester 2026): Chemical, Physical, Mathematical & Biological Sciences.
-                </p>
-            </div>
-            <!-- Pointed verbatim to the required PDF file template -->
-            <a href="IIRT_PhD_Admission_Notification.pdf" target="_blank" class="bg-red-600 text-white font-bold text-xs px-4 py-2 rounded shadow hover:bg-red-700 transition tracking-wide whitespace-nowrap"><i class="fa-solid fa-file-pdf mr-1.5"></i>Open Official Notification (PDF)</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="relative bg-indigo-950 text-white py-24 px-4 md:px-12 overflow-hidden">
-        <div class="absolute inset-0 opacity-30 filter brightness-125 contrast-105">
-            <div class="absolute inset-0 bg-gradient-to-r from-indigo-950 via-indigo-900/60 to-transparent z-10"></div>
-            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=80" alt="IIRT Hyderabad Brightened Campus View" class="w-full h-full object-cover">
-        </div>
-        <div class="max-w-4xl relative z-20">
-            <span class="bg-amber-500 text-slate-950 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Premier Global Research Campus</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mt-4 leading-tight">Shaping the Future through Advanced Research & Technology</h2>
-            <p class="text-lg text-indigo-100 mt-4 max-w-2xl">Establishing elite benchmarks in technological innovation, chemical scaling frameworks, and core doctoral research tracks under A2 Group of Pvt. Limited.</p>
-            <div class="mt-8 space-x-4">
-                <a href="#admissions" class="bg-amber-500 text-slate-900 font-bold px-6 py-3 rounded-md hover:bg-amber-400 transition shadow-lg">Academic Admissions</a>
-                <a href="#programs" class="border border-indigo-300 text-indigo-100 font-semibold px-6 py-3 rounded-md hover:bg-white/10 transition">View Curriculums</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Corporate Governance & Board Structure (A2 Group Owners) -->
-    <section id="governance" class="py-16 bg-white px-4 md:px-12 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-indigo-900 font-bold text-xs uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">Apex Corporate Governance</span>
-                <h2 class="text-3xl font-bold text-indigo-950 mt-2">A2 Group of Pvt. Limited</h2>
-                <p class="text-slate-500 mt-2">IIRT Hyderabad operates as a premier standalone engineering and scientific subsidiary managed under the guidance of A2 Group owners.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-xs flex flex-col items-center text-center">
-                    <div class="w-24 h-24 bg-gradient-to-tr from-indigo-900 to-amber-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4 shadow-md"><i class="fa-solid fa-microscope"></i></div>
-                    <h3 class="text-xl font-bold text-indigo-950">Dr. Ashutosh Dhal</h3>
-                    <p class="text-amber-700 font-semibold text-sm mb-2">Owner & Co-Founder, A2 Group</p>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold bg-white px-3 py-1 rounded border border-slate-200 mb-4">Distinguished Scientist & Visiting Professor</p>
-                    <p class="text-sm text-slate-600 leading-relaxed">Directing research roadmap deployments, structural chemical synthesis scaling parameters, and multi-disciplinary academic infrastructure implementation strategies.</p>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-xs flex flex-col items-center text-center">
-                    <div class="w-24 h-24 bg-gradient-to-tr from-indigo-900 to-amber-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4 shadow-md"><i class="fa-solid fa-atom"></i></div>
-                    <h3 class="text-xl font-bold text-indigo-950">Dr. Abhishek Tyagi</h3>
-                    <p class="text-amber-700 font-semibold text-sm mb-2">Owner & Co-Founder, A2 Group</p>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold bg-white px-3 py-1 rounded border border-slate-200 mb-4">Distinguished Scientist & Visiting Professor</p>
-                    <p class="text-sm text-slate-600 leading-relaxed">Spearheading international laboratory alliances, computing integration patterns, and industrial translational models from laboratory scale to industrial operations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Messages Desk Section -->
-    <section id="messages" class="py-16 bg-slate-100 px-4 md:px-12">
-        <div class="max-w-7xl mx-auto space-y-12">
-            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-3">
-                <div class="relative bg-slate-950 flex justify-center items-center p-4">
-                    <img src="1000428234.png" alt="Prof. Ravi Prava - Director, IIRT" class="w-full h-full object-cover max-h-[480px] lg:max-h-full">
-                </div>
-                <div class="p-8 lg:col-span-2 flex flex-col justify-between">
-                    <div>
-                        <span class="text-amber-600 font-bold text-xs uppercase tracking-wider block mb-1"><i class="fa-solid fa-signature mr-1"></i> Leadership Desk</span>
-                        <h3 class="text-2xl font-bold text-indigo-950">Message from the Director's Desk</h3>
-                        <p class="text-sm italic text-slate-500 mt-1 mb-6">Prof. Ravi Prava — Director, IIRT Hyderabad</p>
-                        <div class="text-slate-600 space-y-4 text-sm leading-relaxed">
-                            <p>"Welcome to IIRT Hyderabad. Modeled upon academic architectures observed across premier IIT structures, our mandate spans core technical streams alongside advanced post-graduate setups. Backed by the industrial capability of A2 Group of Pvt. Limited, we cultivate an ecosystem where intellectual resources meet cutting-edge application infrastructure."</p>
-                            <p>"Our multi-tiered structure from B.Tech to corporate-backed Ph.D. configurations prepares researchers to take on challenging scientific tasks. We enforce strict entry standards across all levels to keep our focus on high-end research output."</p>
-                        </div>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500 flex items-center justify-between">
-                        <span><i class="fa-solid fa-envelope mr-1"></i> director@iirt.ac.in</span>
-                        <span class="font-bold text-indigo-950">IIRT Corporate Administration</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tiered Academic Offerings (UG, PG, Ph.D.) -->
-    <section id="programs" class="py-16 px-4 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-amber-600 font-bold text-xs uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full">Academic Portfolios</span>
-            <h2 class="text-3xl font-bold text-indigo-950 mt-2">Curriculum Frameworks</h2>
-            <p class="text-slate-500 mt-2">Structured divisions spanning Under-Graduate, Post-Graduate, and Doctoral pathways.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- UG Tier -->
-            <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                        <h3 class="text-xl font-bold text-indigo-950">Under-Graduate (UG)</h3>
-                        <span class="bg-indigo-50 text-indigo-950 font-bold text-xs px-2.5 py-1 rounded">B.Tech</span>
-                    </div>
-                    <p class="text-xs text-slate-500 mb-4 font-medium uppercase tracking-wider">Admission via JEE Advanced (Rank 1-100)</p>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>B.Tech in Biotechnology</strong><br><span class="text-xs text-slate-400">HOD: Dr. Elena Rostova</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>B.Tech in Cosmetics Engineering</strong><br><span class="text-xs text-slate-400">HOD: Dr. Kandi Ravi</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>B.Tech in Computer Science</strong><br><span class="text-xs text-slate-400">HOD: Prof. Alistair Vance</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>B.Tech in Electrical Systems</strong><br><span class="text-xs text-slate-400">HOD: Dr. Rajesh K. Nair</span></div></li>
-                    </ul>
-                </div>
-                <a href="#admissions" class="mt-6 text-center text-xs font-bold text-indigo-950 bg-slate-100 hover:bg-indigo-950 hover:text-white transition py-2.5 rounded">View UG Requirements</a>
-            </div>
-
-            <!-- PG Tier -->
-            <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                        <h3 class="text-xl font-bold text-indigo-950">Post-Graduate (PG)</h3>
-                        <span class="bg-amber-50 text-amber-900 font-bold text-xs px-2.5 py-1 rounded">M.Tech / M.Sc.</span>
-                    </div>
-                    <p class="text-xs text-slate-500 mb-4 font-medium uppercase tracking-wider">Admission via GATE / IIT-JAM Matrix</p>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>M.Sc. in Chemistry</strong><br><span class="text-xs text-slate-400">HOD: Dr. Priyadarshini Sen</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>M.Sc. in Physics</strong><br><span class="text-xs text-slate-400">HOD: Prof. Dieter Reinhardt</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>M.Sc. in Mathematics</strong><br><span class="text-xs text-slate-400">HOD: Dr. Marcus Sterling</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-chevron-right text-amber-500 mt-1 mr-2 text-xs"></i> <div><strong>M.Tech in Advanced Formulation</strong><br><span class="text-xs text-slate-400">HOD: Dr. Kandi Ravi</span></div></li>
-                    </ul>
-                </div>
-                <a href="#admissions" class="mt-6 text-center text-xs font-bold text-indigo-950 bg-slate-100 hover:bg-indigo-950 hover:text-white transition py-2.5 rounded">View JAM/GATE Cuts</a>
-            </div>
-
-            <!-- Ph.D. Tier linked to verbatim file name -->
-            <div class="bg-amber-950 text-white rounded-xl border border-amber-900 p-6 shadow-md flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute -right-6 -top-6 bg-red-600 text-white text-[9px] font-black uppercase tracking-widest py-4 px-8 rotate-45 text-center shadow-sm">Active</div>
-                <div>
-                    <div class="flex items-center justify-between border-b border-amber-900 pb-3 mb-4">
-                        <h3 class="text-xl font-bold text-amber-400">Doctoral Core (Ph.D.)</h3>
-                        <span class="bg-red-600 text-white font-bold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">Open</span>
-                    </div>
-                    <p class="text-xs text-amber-200/70 mb-4 font-medium uppercase tracking-wider">Entry via CSIR-NET JRF / UGC-NET / GATE / DBT-BET</p>
-                    <ul class="space-y-3 text-sm text-amber-100">
-                        <li class="flex items-start"><i class="fa-solid fa-flask-vial text-amber-400 mt-1 mr-2 text-xs"></i> <div><strong>Chemical Sciences Research</strong><br><span class="text-xs text-amber-300/60">Heterogeneous Photocatalysis, Green Synthetic Routes, Peptide & Organic Synthesis</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-atom text-amber-400 mt-1 mr-2 text-xs"></i> <div><strong>Physical Sciences Research</strong><br><span class="text-xs text-amber-300/60">Condensed Matter, Semiconductor Devices & Structural Analysis</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-calculator text-amber-400 mt-1 mr-2 text-xs"></i> <div><strong>Mathematical Sciences Research</strong><br><span class="text-xs text-amber-300/60">Numerical Modeling & Fluid Dynamics</span></div></li>
-                        <li class="flex items-start"><i class="fa-solid fa-dna text-amber-400 mt-1 mr-2 text-xs"></i> <div><strong>Biological Sciences Research</strong><br><span class="text-xs text-amber-300/60">Structural Biology & Microfluidic Devices</span></div></li>
-                    </ul>
-                </div>
-                <a href="IIRT_PhD_Admission_Notification.pdf" target="_blank" class="mt-6 text-center text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition py-2.5 rounded"><i class="fa-solid fa-file-pdf mr-1"></i>View Official Details (PDF)</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Faculty Corner Directory Section -->
-    <section id="faculty" class="py-16 bg-slate-200 px-4 md:px-12">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between">
-                <div>
-                    <span class="text-indigo-900 font-bold text-xs uppercase tracking-wider bg-white px-2.5 py-1 rounded border border-slate-300">Intellectual Assets</span>
-                    <h2 class="text-3xl font-bold text-indigo-950 mt-2">Faculty Corner</h2>
-                    <p class="text-slate-500 mt-1">Acclaimed global researchers leading core departmental breakthroughs.</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-5 rounded-lg shadow-xs border border-slate-300/60 text-center flex flex-col justify-between">
-                    <div>
-                        <div class="w-24 h-24 bg-slate-100 rounded-full mx-auto mb-3 border-2 border-amber-500 overflow-hidden flex items-center justify-center text-slate-400"><i class="fa-solid fa-user-tie text-4xl"></i></div>
-                        <h4 class="font-bold text-indigo-950">Prof. Ravi Prava</h4>
-                        <p class="text-xs text-amber-700 font-bold mb-1">Director & Academic Head</p>
-                    </div>
-                    <p class="text-[11px] text-slate-400 border-t border-slate-100 pt-2 mt-2">Ph.D. - Chemical Engineering Systems</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg shadow-xs border border-slate-300/60 text-center flex flex-col justify-between">
-                    <div>
-                        <div class="w-24 h-24 bg-slate-100 rounded-full mx-auto mb-3 border-2 border-slate-200 overflow-hidden flex items-center justify-center text-slate-400"><i class="fa-solid fa-user text-4xl"></i></div>
-                        <h4 class="font-bold text-indigo-950">Prof. Alistair Vance</h4>
-                        <p class="text-xs text-slate-600 font-bold mb-1">Professor & HOD, Computer Science</p>
-                    </div>
-                    <p class="text-[11px] text-slate-400 border-t border-slate-100 pt-2 mt-2">Ph.D. - Distributed Intelligence (MIT)</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg shadow-xs border border-slate-300/60 text-center flex flex-col justify-between">
-                    <div>
-                        <div class="w-24 h-24 bg-slate-100 rounded-full mx-auto mb-3 border-2 border-slate-200 overflow-hidden flex items-center justify-center text-slate-400"><i class="fa-solid fa-user text-4xl"></i></div>
-                        <h4 class="font-bold text-indigo-950">Dr. Priyadarshini Sen</h4>
-                        <p class="text-xs text-slate-600 font-bold mb-1">Associate Prof & HOD, Chemistry</p>
-                    </div>
-                    <p class="text-[11px] text-slate-400 border-t border-slate-100 pt-2 mt-2">Ph.D. - Organic Functional Synthesis</p>
-                </div>
-                <div class="bg-white p-5 rounded-lg shadow-xs border border-slate-300/60 text-center flex flex-col justify-between">
-                    <div>
-                        <div class="w-24 h-24 bg-slate-100 rounded-full mx-auto mb-3 border-2 border-slate-200 overflow-hidden flex items-center justify-center text-slate-400"><i class="fa-solid fa-user text-4xl"></i></div>
-                        <h4 class="font-bold text-indigo-950">Dr. Elena Rostova</h4>
-                        <p class="text-xs text-slate-600 font-bold mb-1">Lead Scientist & HOD, Biotech</p>
-                    </div>
-                    <p class="text-[11px] text-slate-400 border-t border-slate-100 pt-2 mt-2">Ph.D. - Molecular Systems (Cambridge)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Cell & Query Section -->
-    <section id="admissions" class="py-16 bg-slate-900 text-white px-4 md:px-12">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-                <span class="text-amber-400 font-bold text-xs uppercase tracking-wider block mb-2"><i class="fa-solid fa-shield-halved mr-1"></i> Central Admission Cell</span>
-                <h2 class="text-3xl font-bold mb-4">Institutional Enrollment Frameworks</h2>
-                
-                <div class="space-y-4 text-sm text-slate-300">
-                    <p>IIRT maintains definitive selection filters across its UG, PG, and Doctoral tracks to maintain elite academic rigor:</p>
-                    
-                    <div class="bg-slate-800/80 p-3.5 rounded border-l-4 border-amber-500">
-                        <span class="text-xs font-bold text-amber-400 block uppercase">UG (B.Tech Programs)</span>
-                        <p class="text-xs text-slate-200 mt-1">Strict filter limit: Candidates must secure an All India Rank from <strong>Rank 1 to Rank 100</strong> in JEE Advanced.</p>
-                    </div>
-
-                    <div class="bg-slate-800/80 p-3.5 rounded border-l-4 border-indigo-400">
-                        <span class="text-xs font-bold text-indigo-300 block uppercase">PG (M.Sc / M.Tech Programs)</span>
-                        <p class="text-xs text-slate-200 mt-1">M.Sc allocations are administered strictly through the <strong>IIT-JAM examination cutoff channels</strong>. M.Tech tracks require valid GATE metrics.</p>
-                    </div>
-
-                    <div class="bg-red-950/40 p-3.5 rounded border-l-4 border-red-500">
-                        <span class="text-xs font-bold text-red-400 block uppercase">Ph.D. Tracks (Autumn 2026 Active)</span>
-                        <p class="text-xs text-slate-200 mt-1">Requires standard science qualifications along with national level clearances (GATE, CSIR-UGC NET, DBT-BET, or ICMR-JRF). Portal closes on June 6, 2026, at 17:00 HRS IST.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Admission Query Form -->
-            <div class="bg-white text-slate-800 p-8 rounded-xl shadow-lg">
-                <h3 class="text-xl font-bold text-indigo-950 mb-1">Admission Query Portal</h3>
-                <p class="text-xs text-slate-500 mb-6">Submit credential tracking parameters to the Central Desk.</p>
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Verification packet queued for validation.');">
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Full Name</label>
-                        <input type="text" class="w-full border border-slate-200 rounded-md p-2.5 text-sm focus:outline-none focus:border-indigo-900" placeholder="Candidate Name" required>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">National Exam Rank / Score</label>
-                            <input type="text" class="w-full border border-slate-200 rounded-md p-2.5 text-sm focus:outline-none focus:border-indigo-900 bg-amber-50" placeholder="Rank or GATE Score" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Target Qualification</label>
-                            <select class="w-full border border-slate-200 rounded-md p-2.5 text-sm focus:outline-none focus:border-indigo-900 bg-white">
-                                <option>UG - B.Tech Options</option>
-                                <option>PG - M.Sc. Chemistry (JAM)</option>
-                                <option>PG - M.Sc. Physics / Maths</option>
-                                <option>Ph.D. - Chemical Sciences (NET/GATE)</option>
-                                <option>Ph.D. - Physical / Mathematical / Biological</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Academic Clarification Request</label>
-                        <textarea rows="3" class="w-full border border-slate-200 rounded-md p-2.5 text-sm focus:outline-none focus:border-indigo-900" placeholder="Specify your clarification query..." required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-950 text-white font-bold py-3 rounded-md hover:bg-indigo-900 transition tracking-wide text-sm shadow">Dispatch to Registry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Institutional Cells: R&D, Exam, Anti-Ragging -->
-    <section class="py-16 px-4 md:px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div id="research" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200/80 flex flex-col justify-between">
-            <div>
-                <div class="text-indigo-950 text-2xl mb-3"><i class="fa-solid fa-microscope"></i></div>
-                <h3 class="text-lg font-bold text-indigo-950 mb-2">Research & Development Cell</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">Overseeing complex chemical patents and collaborative industrial projects financed under the A2 Group framework.</p>
-            </div>
-            <span class="text-xs font-semibold text-indigo-900 bg-indigo-50 px-2.5 py-1 rounded w-max">Chairperson: Dr. Vikram K. Reddy</span>
-        </div>
-
-        <div id="examination" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200/80 flex flex-col justify-between">
-            <div>
-                <div class="text-indigo-950 text-2xl mb-3"><i class="fa-solid fa-file-signature"></i></div>
-                <h3 class="text-lg font-bold text-indigo-950 mb-2">Examination Cell</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">Autonomous assessment wing organizing central curriculum evaluations, core grading models, and terminal transcript generation.</p>
-            </div>
-            <span class="text-xs font-semibold text-indigo-900 bg-indigo-50 px-2.5 py-1 rounded w-max">Secretary: Prof. Sandeep Anjum</span>
-        </div>
-
-        <div id="anti-ragging" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200/80 flex flex-col justify-between">
-            <div>
-                <div class="text-red-700 text-2xl mb-3"><i class="fa-solid fa-gavel"></i></div>
-                <h3 class="text-lg font-bold text-indigo-950 mb-2">Anti-Ragging Cell</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-4">Strict enforcement of anti-ragging measures to maintain student safety. Guided by modern legislative requirements.</p>
-            </div>
-            <span class="text-xs font-semibold text-red-700 bg-red-50 px-2.5 py-1 rounded w-max">24/7 Hotline Active</span>
-        </div>
-    </section>
-
-    <!-- Comprehensive Academic Fee Structure -->
-    <section id="fees" class="py-16 px-4 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <h2 class="text-3xl font-bold text-indigo-950">Departmental Fee Structure</h2>
-            <p class="text-slate-500 mt-2">Approved annual operational costs per semester. The minimum base rate across all institutional models is set at INR 6,000,000.</p>
-        </div>
-        <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="bg-indigo-950 text-white text-sm tracking-wider uppercase">
-                        <th class="p-4 font-bold">Academic Department / Institutional School</th>
-                        <th class="p-4 font-bold">Tuition Cost (Per Sem)</th>
-                        <th class="p-4 font-bold">Lab & Infrastructure Levy</th>
-                        <th class="p-4 font-bold text-right">Total Semester Cost</th>
-                    </tr>
-                </thead>
-                <tbody class="text-sm divide-y divide-slate-100 text-slate-700">
-                    <tr class="bg-amber-50/60 font-medium">
-                        <td class="p-4 text-indigo-950 font-bold"><i class="fa-solid fa-star text-amber-500 mr-2"></i>Department of Cosmetics (Flagship Tier)</td>
-                        <td class="p-4">₹5,50,000</td>
-                        <td class="p-4">₹50,000</td>
-                        <td class="p-4 text-right font-bold text-indigo-950">₹6,00,000 INR</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">School of Computer Science & Engineering</td>
-                        <td class="p-4">₹6,20,000</td>
-                        <td class="p-4">₹60,000</td>
-                        <td class="p-4 text-right font-bold text-indigo-950">₹6,80,000 INR</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">Post-Graduate Division: M.Sc. Chemistry / Physics</td>
-                        <td class="p-4">₹5,40,000</td>
-                        <td class="p-4">₹60,000</td>
-                        <td class="p-4 text-right font-bold text-indigo-950">₹6,00,000 INR</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">School of Electrical & Electronic Systems</td>
-                        <td class="p-4">₹5,90,000</td>
-                        <td class="p-4">₹40,000</td>
-                        <td class="p-4 text-right font-bold text-indigo-950">₹6,30,000 INR</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 font-semibold">Doctoral Division: Ph.D. Core Sciences</td>
-                        <td class="p-4">₹5,60,000</td>
-                        <td class="p-4">₹40,000</td>
-                        <td class="p-4 text-right font-bold text-indigo-950">₹6,00,000 INR</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Student Login Secure Section -->
-    <section id="login" class="py-16 bg-slate-200 px-4 flex justify-center items-center">
-        <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md border border-slate-300/40">
-            <div class="text-center mb-6">
-                <div class="inline-flex p-3 bg-indigo-50 text-indigo-950 text-xl rounded-full mb-2"><i class="fa-solid fa-fingerprint"></i></div>
-                <h3 class="text-xl font-bold text-indigo-950">Student Login Portal</h3>
-                <p class="text-xs text-slate-500">Access ERP, Course Grades, and Personal Academic Dashboards</p>
-            </div>
-            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Authentication system operational checks active.');">
-                <div>
-                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Institutional Roll ID</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs"><i class="fa-solid fa-id-card"></i></span>
-                        <input type="text" class="w-full border border-slate-200 rounded-md pl-9 pr-3 py-2 text-sm focus:outline-none focus:border-indigo-900" placeholder="IIRT/COS/2026/012" required>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-600 uppercase mb-1">Security Password</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs"><i class="fa-solid fa-key"></i></span>
-                        <input type="password" class="w-full border border-slate-200 rounded-md pl-9 pr-3 py-2 text-sm focus:outline-none focus:border-indigo-900" placeholder="••••••••" required>
-                    </div>
-                </div>
-                <button type="submit" class="w-full bg-indigo-950 text-white font-bold py-2.5 rounded-md hover:bg-indigo-900 transition text-sm shadow tracking-wide">Log In</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-indigo-950 text-slate-400 text-xs py-12 px-4 md:px-12 border-t-2 border-amber-500">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-                <h4 class="text-sm font-bold text-white mb-3">IIRT Hyderabad</h4>
-                <p class="leading-relaxed text-slate-400">Autonomous scientific research engine and technological institute modeled on peak academic paradigms. Integrated sub-group operations under corporate oversight of A2 Group of Pvt. Limited.</p>
-            </div>
-            <div>
-                <h4 class="text-sm font-bold text-white mb-3">Statutory Portals</h4>
-                <ul class="space-y-2">
-                    <li><a href="#research" class="hover:text-white transition">Research & Development Council</a></li>
-                    <li><a href="#examination" class="hover:text-white transition">Autonomous Examination Cell</a></li>
-                    <li><a href="#admissions" class="hover:text-white transition">Central Admission Desk</a></li>
-                    <li><a href="#anti-ragging" class="hover:text-white transition">Anti-Ragging Safety Protocols</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-sm font-bold text-white mb-3">Campus Proximity Location</h4>
-                <p class="leading-relaxed">Tech-Innovation Campus,<br>Gachibowli, Hyderabad,<br>Telangana - 500032, India</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto border-t border-indigo-900/60 pt-6 text-center text-slate-500 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-            <p>&copy; 2026 Indian Institute of Research and Technology (IIRT), Hyderabad. All Rights Reserved.</p>
-            <p class="text-[10px] text-slate-600 font-mono">Owners: Dr. Ashutosh Dhal & Dr. Abhishek Tyagi | A2 Group of Pvt. Limited</p>
-        </div>
-    </footer>
-
-    <!-- Three-Dot Interactive Control Logic -->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const menuDropdown = document.getElementById('menuDropdown');
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            menuDropdown.classList.toggle('show');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!menuDropdown.contains(e.target) && e.target !== menuBtn) {
-                menuDropdown.classList.remove('show');
-            }
-        });
-    </script>
-
+<body>
+<header>
+<h1>Indian Institute of Research and Technology (IIRT), Hyderabad</h1>
+<p>Advancing Research, Innovation and Entrepreneurship</p>
+</header>
+<nav>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#admissions">Admissions</a>
+<a href="#facilities">Facilities</a>
+<a href="#contact">Contact</a>
+</nav>
+<section id="about">
+<h2>About IIRT</h2>
+<p>A multidisciplinary research institute focused on Chemical Sciences, Physical Sciences and Mathematical Sciences.</p>
+</section>
+<section id="research">
+<h2>Research Schools</h2>
+<div class="grid">
+<div class="card"><h3>Chemical Sciences</h3><p>Organic synthesis, medicinal chemistry, spectroscopy.</p></div>
+<div class="card"><h3>Physical Sciences</h3><p>Condensed matter, photonics, computational physics.</p></div>
+<div class="card"><h3>Mathematical Sciences</h3><p>Applied mathematics, modelling and data science.</p></div>
+</div>
+</section>
+<section id="admissions">
+<h2>PhD Admissions 2026</h2>
+<p>Applicants through GATE, CSIR-UGC NET JRF, UGC-NET JRF and related fellowships.</p>
+</section>
+<section id="facilities">
+<h2>Research Facilities</h2>
+<ul>
+<li>NMR Spectroscopy</li>
+<li>LC-MS/MS</li>
+<li>GC-MS</li>
+<li>HPLC</li>
+<li>XRD</li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: admissions@iirt.edu</p>
+</section>
+<footer>© 2026 IIRT Hyderabad</footer>
 </body>
 </html>
