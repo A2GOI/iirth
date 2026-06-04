@@ -3,616 +3,607 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Institute of Interdisciplinary Research and Technology (IIRT), Hyderabad</title>
-    <!-- Tailwind CSS Core via CDN -->
+    <title>Indian Institute of Research and Technology (IIRT), Hyderabad</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome Vector Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Premium Google Fonts Framework matching specs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Poppins', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-title { font-family: 'Merriweather', serif; }
         html { scroll-behavior: smooth; }
-        
-        /* Smooth Parallax configuration layer */
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.95; }
         }
-        
-        /* IISc Mega Menu Display Interactions */
-        .mega-menu-trigger:hover .mega-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .mega-menu {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease-in-out;
-        }
-        
-        /* CSS-driven Counter Animation Triggers */
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .counter-animate { animation: countUp 1s ease-out forwards; }
+        .live-pulse { animation: pulse-soft 2.5s infinite ease-in-out; }
+        .menu-dropdown { display: none; }
+        .menu-dropdown.show { display: block; }
     </style>
 </head>
-<body class="bg-[#FCFDFD] text-slate-800 antialiased">
+<body class="bg-[#fcfdfd] text-slate-800 antialiased">
 
-    <!-- Top Utility Information Strip -->
-    <div class="bg-[#062456] text-slate-300 text-[11px] font-medium py-2 px-6 md:px-16 flex justify-between items-center border-b border-[#0B3D91]/40">
+    <div class="bg-[#0f2547] text-slate-300 text-[11px] font-medium py-2.5 px-6 md:px-16 flex justify-between items-center border-b border-indigo-950/40">
         <div class="flex items-center space-x-2">
-            <span class="bg-[#D4AF37] text-slate-950 text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded-sm">National Portal</span>
-            <span>Center for Advanced Interdisciplinary Research</span>
+            <span class="bg-amber-500 text-slate-950 text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded-sm">Subsidiary</span>
+            <span>A2 Group of Pvt. Limited &bull; Center for Advanced Scientific Research</span>
         </div>
         <div class="hidden md:flex items-center space-x-6 tracking-wide">
-            <a href="#anti-ragging" class="hover:text-[#D4AF37] transition-colors">Anti-Ragging Cell</a>
+            <a href="#anti-ragging" class="hover:text-amber-400 transition-colors">Anti-Ragging Cell</a>
             <span class="text-slate-600">|</span>
-            <a href="#examination" class="hover:text-[#D4AF37] transition-colors">Examination Portal</a>
+            <a href="#examination" class="hover:text-amber-400 transition-colors">Examination Cell</a>
             <span class="text-slate-600">|</span>
-            <a href="#login" class="hover:text-white transition-colors"><i class="fa-solid fa-lock mr-1.5 text-[#D4AF37]"></i>Internal ERP</a>
+            <a href="#login" class="hover:text-white transition-colors"><i class="fa-solid fa-lock mr-1.5 text-amber-400"></i>Internal Portal</a>
         </div>
     </div>
 
-    <!-- Modern Navigation Bar & IISc-Style Mega Menu Matrix -->
-    <nav class="bg-white border-b border-slate-200/80 sticky top-0 z-50 shadow-xs px-6 md:px-16 py-3.5 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <div class="bg-white p-1 rounded border border-slate-100 shadow-xs shrink-0">
-                <img src="1000182692.jpg" alt="IIRT Crest Logo" class="h-16 w-16 object-contain">
+    <header class="bg-white border-b border-slate-200/60 sticky top-0 z-50 shadow-xs px-6 md:px-16 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+            <div class="bg-white p-1.5 rounded border border-slate-100 shadow-xs shrink-0">
+                <img src="1000182692.jpg" alt="IIRT Hyderabad Crest" class="h-24 w-24 object-contain">
             </div>
-            <div>
-                <h1 class="font-heading text-lg md:text-xl font-bold text-[#0B3D91] tracking-tight leading-tight">IIRT Hyderabad</h1>
-                <p class="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37]">Indian Institute of Interdisciplinary Research and Technology</p>
+            <div class="space-y-0.5">
+                <h1 class="font-serif-title text-2xl md:text-3xl font-bold text-[#0b1c33] tracking-tight leading-tight">Indian Institute of Research and Technology</h1>
+                <h2 class="text-base md:text-lg font-bold text-slate-600 tracking-wide font-sans leading-none">भारतीय अनुसंधान एवं प्रौद्योगिकी संस्थान, हैदराबाद</h2>
+                <h2 class="text-sm md:text-base font-semibold text-slate-500 tracking-wide font-sans leading-relaxed">భారతీయ పరిశోధన మరియు సాంకేతిక సంస్థ, హైదరాబాద్</h2>
+                <div class="text-[10px] uppercase font-bold tracking-widest text-amber-700 pt-0.5">Established 2026 &bull; Gachibowli Tech Ecosystem</div>
             </div>
         </div>
 
-        <!-- Desktop Core Horizontal Menu Layout -->
-        <div class="hidden lg:flex items-center space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-600">
-            <a href="#" class="hover:text-[#0B3D91] transition-colors">Home</a>
-            <a href="#about" class="hover:text-[#0B3D91] transition-colors">About</a>
+        <div class="flex items-center space-x-4 relative">
+            <a href="#admissions" class="hidden lg:inline-flex bg-[#0f2547] hover:bg-[#163566] text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded shadow-xs transition-all">Apply Online</a>
             
-            <!-- Research Option Triggering the Mega Menu Grid -->
-            <div class="relative mega-menu-trigger py-4 cursor-pointer text-slate-700 hover:text-[#0B3D91]">
-                <span class="flex items-center">Research <i class="fa-solid fa-chevron-down text-[9px] ml-1.5 text-[#D4AF37]"></i></span>
-                
-                <!-- Mega Menu Box Dropdown -->
-                <div class="mega-menu absolute left-1/2 -translate-x-1/2 top-full w-[640px] bg-white rounded-lg shadow-2xl border border-slate-200 p-6 grid grid-cols-2 gap-6 normal-case text-slate-600 font-normal">
-                    <div>
-                        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-[#0B3D91] border-b border-slate-100 pb-2 mb-3">Research Divisions</h4>
-                        <ul class="space-y-2 text-xs">
-                            <li><a href="#divisions" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-flask mr-2 text-[#0B3D91]"></i> Chemical Sciences</a></li>
-                            <li><a href="#divisions" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-atom mr-2 text-[#0B3D91]"></i> Physical Sciences</a></li>
-                            <li><a href="#divisions" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-calculator mr-2 text-[#0B3D91]"></i> Mathematical Sciences</a></li>
-                            <li><a href="#divisions" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-microchip mr-2 text-[#0B3D91]"></i> Computational Sciences</a></li>
-                            <li><a href="#divisions" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-dna mr-2 text-[#0B3D91]"></i> Interdisciplinary Research</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-[#0B3D91] border-b border-slate-100 pb-2 mb-3">Resources & Assets</h4>
-                        <ul class="space-y-2 text-xs">
-                            <li><a href="#facilities" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-microscope mr-2 text-[#0B3D91]"></i> Research Facilities</a></li>
-                            <li><a href="#highlights" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-certificate mr-2 text-[#0B3D91]"></i> Patents & Output</a></li>
-                            <li><a href="#news" class="hover:text-[#D4AF37] flex items-center font-medium"><i class="fa-solid fa-scroll mr-2 text-[#0B3D91]"></i> Active Fellowships</a></li>
-                        </ul>
-                    </div>
+            <button id="menuBtn" class="text-slate-700 hover:text-[#0f2547] p-3 text-2xl focus:outline-none transition-colors rounded-full hover:bg-slate-50 border border-slate-200/60" aria-label="Toggle Navigation Hub">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+
+            <div id="menuDropdown" class="menu-dropdown absolute right-0 top-full mt-3 w-80 bg-white rounded-xl shadow-2xl border border-slate-200/80 py-3 z-50 font-sans animate-fadeIn">
+                <div class="px-4 py-2 border-b border-slate-100 mb-1">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Institutional Navigation</span>
                 </div>
-            </div>
-
-            <a href="#faculty" class="hover:text-[#0B3D91] transition-colors">Faculty</a>
-            <a href="#admissions-alert" class="hover:text-[#0B3D91] transition-colors">Admissions</a>
-            <a href="#facilities" class="hover:text-[#0B3D91] transition-colors">Facilities</a>
-            <a href="#highlights" class="hover:text-[#0B3D91] transition-colors">Publications</a>
-            <a href="#news" class="hover:text-[#0B3D91] transition-colors">News</a>
-            <a href="#contact" class="hover:text-[#0B3D91] transition-colors">Contact</a>
-        </div>
-
-        <a href="#admissions-alert" class="bg-[#0B3D91] hover:bg-[#062456] text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2.5 rounded shadow-sm border border-[#D4AF37]/30 transition-all">Apply Online</a>
-    </nav>
-
-    <!-- 1. Professional Parallax Hero Section Layout -->
-    <section class="relative bg-[#03132B] text-white py-40 px-6 md:px-16 overflow-hidden parallax-bg border-b-4 border-[#D4AF37]" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#03132B] via-[#062456]/90 to-transparent z-10"></div>
-        <div class="max-w-5xl relative z-20 space-y-6">
-            <span class="inline-flex items-center bg-[#D4AF37]/10 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-sm">
-                <i class="fa-solid fa-building-columns mr-2"></i>Apex National Institute Framework
-            </span>
-            <h2 class="font-heading text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight max-w-4xl">
-                Indian Institute of Interdisciplinary Research and Technology (IIRT), Hyderabad
-            </h2>
-            <p class="text-sm md:text-base text-slate-300 max-w-2xl font-light leading-relaxed tracking-wide">
-                Advancing Research in Chemical Sciences, Physical Sciences, Mathematical Sciences & Emerging Technologies through programmatic excellence.
-            </p>
-            <div class="pt-4 flex flex-wrap gap-4 font-heading text-xs font-bold uppercase tracking-wider">
-                <a href="#admissions-alert" class="bg-[#D4AF37] hover:bg-[#bfa032] text-slate-950 px-6 py-3.5 rounded transition shadow-md"><i class="fa-solid fa-paper-plane mr-2"></i>Apply for PhD 2026</a>
-                <a href="#divisions" class="bg-white/10 border border-slate-400 hover:border-white text-white px-6 py-3.5 rounded transition backdrop-blur-xs">Research Programs</a>
-                <a href="#contact" class="bg-transparent text-slate-300 hover:text-white border-b-2 border-slate-500 hover:border-[#D4AF37] py-3.5 px-2 transition">Contact Us &rarr;</a>
+                <a href="#" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-house mr-3.5 text-[#0f2547] w-4"></i>Home Page</a>
+                <a href="#leadership" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-user-gear mr-3.5 text-[#0f2547] w-4"></i>Governance & Leadership</a>
+                <a href="#schools" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-graduation-cap mr-3.5 text-[#0f2547] w-4"></i>Research Schools</a>
+                <a href="#facilities" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-microscope mr-3.5 text-[#0f2547] w-4"></i>Instrumentation Facility</a>
+                <a href="#publications" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-book-open mr-3.5 text-[#0f2547] w-4"></i>Publications & Patents</a>
+                <a href="#fellowship" class="flex items-center px-4 py-3 text-xs font-bold text-amber-800 hover:bg-amber-50 uppercase tracking-wider transition"><i class="fa-solid fa-award mr-3.5 text-amber-600 w-4"></i>Summer Fellowship (ISRF)</a>
+                <a href="#admissions" class="flex items-center px-4 py-3 text-xs font-bold text-red-600 hover:bg-red-50 uppercase tracking-wider transition"><i class="fa-solid fa-door-open mr-3.5 text-red-600 w-4"></i>Admissions Framework</a>
+                <a href="#news" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-newspaper mr-3.5 text-[#0f2547] w-4"></i>News & Events Hub</a>
+                <a href="#fees" class="flex items-center px-4 py-3 text-xs font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0f2547] uppercase tracking-wider transition"><i class="fa-solid fa-indian-rupee-sign mr-3.5 text-[#0f2547] w-4"></i>Fee Framework</a>
+                <div class="border-t border-slate-100 my-1 lg:hidden"></div>
+                <a href="#admissions" class="flex lg:hidden items-center px-4 py-3 text-xs font-bold text-[#0f2547] hover:bg-slate-50 uppercase tracking-wider transition"><i class="fa-solid fa-file-signature mr-3.5 w-4"></i>Apply Online Now</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- 4. Admissions Banner Matrix -->
-    <section id="admissions-alert" class="bg-amber-50 border-y border-[#D4AF37]/40 py-6 px-6 md:px-16">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div class="space-y-2 max-w-4xl">
-                <div class="flex items-center space-x-2.5 text-red-700 font-bold text-sm uppercase tracking-wide">
-                    <span class="bg-red-600 text-white text-[9px] font-black px-2 py-0.5 rounded animate-pulse">🚨 Alert</span>
-                    <h4>PhD Admissions 2026 Operational Framework Open</h4>
-                </div>
-                <p class="text-xs text-slate-600 font-medium leading-relaxed">
-                    <strong>Core Track Disciplines:</strong> Chemical Sciences | Physical Sciences | Mathematical Sciences.<br>
-                    <strong>Eligible Valuation Channels:</strong> Gate Score Validation &bull; CSIR-UGC NET JRF Frameworks &bull; Direct Institutional Technical Review Interviews.
+    <div class="bg-red-50 border-b border-red-200/60 py-3.5 px-6 md:px-16 live-pulse">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3.5 text-center lg:text-left">
+                <span class="bg-red-600 text-white text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded-xs shrink-0">Official Bulletin</span>
+                <p class="text-xs font-bold text-red-950 font-sans tracking-wide">
+                    Ph.D. Admission Notification Open (Autumn Semester 2026): Active Tracks in Chemical, Physical, Mathematical & Biological Core Divisions.
                 </p>
             </div>
-            <a href="#admissions-form" class="bg-[#0B3D91] hover:bg-[#062456] text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded border border-[#D4AF37]/40 transition shadow-sm whitespace-nowrap">Apply Now Portal</a>
+            <a href="IIRT_PhD_Admission_Notification.pdf" target="_blank" class="bg-red-700 hover:bg-red-800 text-white text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-sm shadow-xs transition-colors whitespace-nowrap"><i class="fa-solid fa-file-pdf mr-2"></i>Download Notification (PDF)</a>
         </div>
-    </section>
+    </div>
 
-    <!-- About Section Layer -->
-    <section id="about" class="py-16 bg-white px-6 md:px-16 border-b border-slate-200/60">
-        <div class="max-w-4xl mx-auto text-center space-y-4">
-            <span class="text-[10px] font-bold text-[#0B3D91] uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">Institutional Mandate</span>
-            <h3 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">About IIRT Hyderabad</h3>
-            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-light">
-                Constituted to fulfill critical objectives in translational scientific discovery, IIRT Hyderabad provides the infrastructure necessary to accelerate breakthrough investigations. Bridging baseline theory with operational scalability, the institute serves as an ecosystem for academic research, technical cross-training, and industry-aligned collaborative development.
+    <section class="relative bg-[#061224] text-white py-36 px-6 md:px-16 overflow-hidden border-b-4 border-amber-500">
+        <div class="absolute inset-0 opacity-25 filter brightness-90 contrast-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#061224] via-[#091b33]/80 to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=80" alt="IIRT Hyderabad Campus Grand Complex" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-4xl relative z-20 space-y-6">
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-xs">
+                <i class="fa-solid fa-building-columns mr-1.5 text-sm"></i>Center for Advanced Scientific Research
+            </div>
+            <h2 class="font-serif-title text-4xl md:text-6xl font-bold text-white tracking-tight leading-none max-w-3xl">Pursuit of Knowledge, Innovation & Global Excellence</h2>
+            <p class="text-sm md:text-base text-slate-300 max-w-2xl font-light leading-relaxed tracking-wide font-sans">
+                IIRT Hyderabad is a premium engineering and advanced post-graduate scientific research framework dedicated to breakthrough innovations across molecular chemistry, physical systems, and computational algorithms.
             </p>
-        </div>
-    </section>
-
-    <!-- 2. Research-Focused Homepage Divisions -->
-    <section id="divisions" class="py-20 bg-slate-50 px-6 md:px-16 border-b border-slate-200/60">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-[10px] font-bold text-[#0B3D91] uppercase tracking-widest bg-blue-50 border border-blue-100 px-3 py-1 rounded-sm">Academic Structure</span>
-                <h3 class="font-heading text-3xl font-extrabold text-slate-900 mt-2">Core Research Divisions</h3>
-                <p class="text-xs text-slate-500 font-medium">Prominently showcasing thematic execution across foundational and applied science parameters.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <!-- Division 1 -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-2xs hover:shadow-md hover:border-[#D4AF37] transition group">
-                    <div class="text-2xl text-[#0B3D91] mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-flask-vials"></i></div>
-                    <h4 class="font-heading font-bold text-sm text-slate-900 mb-2">Chemical Sciences</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Focusing on heterogeneous photocatalysis diagnostics, organic molecule design, and green catalytic pathways.</p>
-                </div>
-                <!-- Division 2 -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-2xs hover:shadow-md hover:border-[#D4AF37] transition group">
-                    <div class="text-2xl text-[#0B3D91] mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-wave-square"></i></div>
-                    <h4 class="font-heading font-bold text-sm text-slate-900 mb-2">Physical Sciences</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Exploring experimental condensed matter structures, materials processing, and spectroscopic configurations.</p>
-                </div>
-                <!-- Division 3 -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-2xs hover:shadow-md hover:border-[#D4AF37] transition group">
-                    <div class="text-2xl text-[#0B3D91] mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-calculator"></i></div>
-                    <h4 class="font-heading font-bold text-sm text-slate-900 mb-2">Mathematical Sciences</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Delivering structural analytics, numerical data processing systems, and statistical matrix tracking models.</p>
-                </div>
-                <!-- Division 4 -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-2xs hover:shadow-md hover:border-[#D4AF37] transition group">
-                    <div class="text-2xl text-[#0B3D91] mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-microchip"></i></div>
-                    <h4 class="font-heading font-bold text-sm text-slate-900 mb-2">Computational Sciences</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Accelerating structural prediction loops using advanced high-performance data processing software clusters.</p>
-                </div>
-                <!-- Division 5 -->
-                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-2xs hover:shadow-md hover:border-[#D4AF37] transition group">
-                    <div class="text-2xl text-[#0B3D91] mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-dna"></i></div>
-                    <h4 class="font-heading font-bold text-sm text-slate-900 mb-2">Interdisciplinary Research</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">Bridging molecular scaling boundaries with active biological systems and modern translation setups.</p>
-                </div>
+            <div class="pt-4 flex flex-wrap gap-4">
+                <a href="#schools" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-sm shadow-md transition-colors">Explore Research Schools</a>
+                <a href="#facilities" class="border border-slate-400 hover:border-white text-slate-200 hover:text-white font-semibold text-xs uppercase tracking-wider px-6 py-3.5 rounded-sm transition-colors bg-white/5">Central Instrumentation</a>
             </div>
         </div>
     </section>
 
-    <!-- 3. "IIRT in Numbers" Section with Animated Counter Structure -->
-    <section class="bg-[#03132B] text-white py-16 px-6 md:px-16 border-b border-[#0B3D91]">
-        <div class="max-w-7xl mx-auto">
-            <h4 class="text-center text-[10px] uppercase font-bold tracking-widest text-[#D4AF37] mb-10">IIRT in Numbers</h4>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
-                <div class="counter-animate">
-                    <div class="font-heading text-4xl md:text-5xl font-black text-[#D4AF37]">25+</div>
-                    <p class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Research Scholars</p>
-                </div>
-                <div class="counter-animate">
-                    <div class="font-heading text-4xl md:text-5xl font-black text-[#D4AF37]">15+</div>
-                    <p class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Faculty & Visiting Scientists</p>
-                </div>
-                <div class="counter-animate">
-                    <div class="font-heading text-4xl md:text-5xl font-black text-[#D4AF37]">10+</div>
-                    <p class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Research Projects</p>
-                </div>
-                <div class="counter-animate">
-                    <div class="font-heading text-4xl md:text-5xl font-black text-[#D4AF37]">5+</div>
-                    <p class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">International Collaborations</p>
-                </div>
+    <section class="bg-[#0b1c33] text-white py-12 px-6 md:px-16 border-b border-indigo-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
+            <div class="p-2 border-none">
+                <div class="font-serif-title text-4xl md:text-5xl font-black text-amber-400 tracking-tight">25+</div>
+                <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Active Research Projects</div>
+            </div>
+            <div class="p-2">
+                <div class="font-serif-title text-4xl md:text-5xl font-black text-amber-400 tracking-tight">50+</div>
+                <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">International Publications</div>
+            </div>
+            <div class="p-2">
+                <div class="font-serif-title text-4xl md:text-5xl font-black text-amber-400 tracking-tight">10+</div>
+                <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Advanced Core Laboratories</div>
+            </div>
+            <div class="p-2">
+                <div class="font-serif-title text-4xl md:text-5xl font-black text-amber-400 tracking-tight">100+</div>
+                <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-2">Doctoral Research Scholars</div>
             </div>
         </div>
     </section>
 
-    <!-- 6. Research Highlights Section -->
-    <section id="highlights" class="py-16 px-6 md:px-16 bg-white border-b border-slate-200/60">
+    <section id="news" class="py-16 px-6 md:px-16 bg-slate-50 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-slate-200 pb-4 mb-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200 pb-4 mb-10">
                 <div>
-                    <span class="text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest">Scientific Repositories</span>
-                    <h3 class="font-heading text-2xl md:text-3xl font-bold text-slate-900 mt-1">Research Highlights</h3>
+                    <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest">Live Bulletins</span>
+                    <h3 class="font-serif-title text-2xl md:text-3xl font-bold text-[#0b1c33] mt-1">News & Academic Events</h3>
                 </div>
-                <span class="text-xs font-semibold text-[#0B3D91] uppercase tracking-wider mt-2 md:mt-0">Index Matrix Tracking</span>
+                <a href="#admissions" class="text-xs font-bold text-[#0f2547] hover:text-amber-700 transition-colors mt-2 md:mt-0 uppercase tracking-wider">View All Notices &rarr;</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-5 bg-slate-50 rounded border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded border border-slate-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="text-[#0B3D91] text-base mb-2"><i class="fa-solid fa-file-lines"></i></div>
-                        <h5 class="font-heading font-bold text-xs text-slate-900 uppercase tracking-wide mb-1">Recent Publications</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Peer-reviewed outputs indexation parameters across high-impact international scientific distribution channels.</p>
+                        <span class="text-[9px] font-extrabold text-red-600 uppercase tracking-widest block mb-2"><i class="fa-solid fa-circle text-[6px] mr-1 mb-0.5 animate-pulse"></i>Admissions Desk</span>
+                        <h4 class="font-serif-title font-bold text-[#0b1c33] text-sm leading-snug mb-3">PhD Admissions Active</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed font-normal">Online portals are completely operational for incoming Autumn Semester 2026 science cohorts. Application registry closes June 6, 2026.</p>
                     </div>
+                    <a href="IIRT_PhD_Admission_Notification.pdf" target="_blank" class="text-[11px] font-bold text-[#0f2547] hover:underline mt-4 uppercase tracking-wider">Read Full Matrix</a>
                 </div>
-                <div class="p-5 bg-slate-50 rounded border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded border border-slate-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="text-[#0B3D91] text-base mb-2"><i class="fa-solid fa-shield-halved"></i></div>
-                        <h5 class="font-heading font-bold text-xs text-slate-900 uppercase tracking-wide mb-1">Patents Registered</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Intellectual property structures protecting novel material processing paths and photocatalytic systems.</p>
+                        <span class="text-[9px] font-extrabold text-indigo-600 uppercase tracking-widest block mb-2">Workshops 2026</span>
+                        <h4 class="font-serif-title font-bold text-[#0b1c33] text-sm leading-snug mb-3">Advanced NMR Workshop</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed font-normal">Register for upcoming analytical characterization symposium tracking high-resolution 500 MHz NMR structural resolution sequences.</p>
                     </div>
+                    <a href="#facilities" class="text-[11px] font-bold text-[#0f2547] hover:underline mt-4 uppercase tracking-wider">Facility Roadmap</a>
                 </div>
-                <div class="p-5 bg-slate-50 rounded border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded border border-slate-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="text-[#0B3D91] text-base mb-2"><i class="fa-solid fa-users-rectangle"></i></div>
-                        <h5 class="font-heading font-bold text-xs text-slate-900 uppercase tracking-wide mb-1">Conference Presentations</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Proceedings actively presented across apex engineering conventions and physical sciences symposia fields.</p>
+                        <span class="text-[9px] font-extrabold text-amber-700 uppercase tracking-widest block mb-2">National Internships</span>
+                        <h4 class="font-serif-title font-bold text-[#0b1c33] text-sm leading-snug mb-3">Summer Fellowship Selection</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed font-normal">Applications are being screened for the flagship 6-8 week fully-mentored core summer research track across basic science domains.</p>
                     </div>
+                    <a href="#fellowship" class="text-[11px] font-bold text-[#0f2547] hover:underline mt-4 uppercase tracking-wider">Fellowship Specifications</a>
                 </div>
-                <div class="p-5 bg-slate-50 rounded border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white p-6 rounded border border-slate-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <div class="text-[#0B3D91] text-base mb-2"><i class="fa-solid fa-award"></i></div>
-                        <h5 class="font-heading font-bold text-xs text-slate-900 uppercase tracking-wide mb-1">Student Achievements</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Recognitions achieved by elite institutional research scholars at national level validation challenges.</p>
+                        <span class="text-[9px] font-extrabold text-emerald-600 uppercase tracking-widest block mb-2">Seminar Series</span>
+                        <h4 class="font-serif-title font-bold text-[#0b1c33] text-sm leading-snug mb-3">Computational Chemistry Data</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed font-normal">Weekly expert lectures charting the convergence of physics datasets with deep heterogeneous photocatalysis modeling rules.</p>
                     </div>
+                    <a href="#publications" class="text-[11px] font-bold text-[#0f2547] hover:underline mt-4 uppercase tracking-wider">Academic Papers</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Faculty Directory Page Section Layout -->
-    <section id="faculty" class="py-20 bg-slate-50 px-6 md:px-16 border-b border-slate-200/60">
+    <section id="leadership" class="py-16 bg-white px-6 md:px-16 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-[10px] font-bold text-[#0B3D91] uppercase tracking-widest bg-blue-50 border border-blue-100 px-3 py-1 rounded-sm">Governance & Instruction</span>
-                <h3 class="font-heading text-3xl font-extrabold text-slate-900 mt-2">Faculty & Board Directory</h3>
-                <p class="text-xs text-slate-500 font-medium">Tracking profiles driving institutional research parameters.</p>
+                <span class="text-[10px] font-bold text-indigo-900 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-sm">Institutional Structure</span>
+                <h3 class="font-serif-title text-3xl font-bold text-[#0b1c33] mt-2">Executive Governance Directory</h3>
+                <p class="text-xs text-slate-500 mt-2 font-normal leading-relaxed">Steered by leading scientists enforcing rigorous standards across translational chemistry, structural physics, and global industrial workflows.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Profile Card 1 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#D4AF37] transition">
-                    <div class="p-6 space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-tr from-[#0B3D91] to-[#D4AF37] text-white rounded-full flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-user-tie"></i></div>
-                            <div>
-                                <h4 class="font-heading font-bold text-base text-slate-900">Dr. Kandi Ravi</h4>
-                                <p class="text-[11px] text-[#D4AF37] font-bold uppercase tracking-wider">Director</p>
-                            </div>
-                        </div>
-                        <div class="text-[11px] space-y-2 border-t border-slate-100 pt-3">
-                            <p><strong>Research Interests:</strong> Formulation Chemistry, Scaling Systems, Catalytic Processing.</p>
-                            <p><strong>Publications:</strong> 40+ Peer-Reviewed Papers across standard global indexes.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs">
-                        <div class="space-x-2 text-slate-400">
-                            <a href="#" class="hover:text-[#0B3D91]" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                            <a href="#" class="hover:text-[#0B3D91]" title="ORCID"><i class="fa-solid fa-id-card"></i></a>
-                        </div>
-                        <span class="text-[10px] font-mono font-medium text-slate-500">k.ravi@iirt.ac.in</span>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-14">
+                <div class="bg-slate-50/60 p-8 rounded border border-slate-200/80 flex flex-col items-center text-center shadow-xs">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-[#0f2547] to-amber-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-sm"><i class="fa-solid fa-microscope"></i></div>
+                    <h4 class="font-serif-title text-xl font-bold text-[#0b1c33]">Dr. Ashutosh Dhal</h4>
+                    <p class="text-amber-700 font-bold text-xs uppercase tracking-wider mt-0.5">Director, IIRT</p>
+                    <p class="text-[10px] text-slate-400 font-mono uppercase bg-white border border-slate-200 px-2 py-0.5 mt-2 rounded-xs">M.Sc. Chemistry & Principal Investigator</p>
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal mt-3.5">Directing core tactical laboratory alignments, organic functional metrics, advanced heterogeneous photocatalysis frameworks, and central project fellowship boards.</p>
                 </div>
-
-                <!-- Profile Card 2 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#D4AF37] transition">
-                    <div class="p-6 space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-tr from-[#0B3D91] to-[#D4AF37] text-white rounded-full flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-vials"></i></div>
-                            <div>
-                                <h4 class="font-heading font-bold text-base text-slate-900">Dr. Ashutosh Dhal</h4>
-                                <p class="text-[11px] text-[#D4AF37] font-bold uppercase tracking-wider">Visiting Scientist & Co-Founder</p>
-                            </div>
-                        </div>
-                        <div class="text-[11px] space-y-2 border-t border-slate-100 pt-3">
-                            <p><strong>Research Interests:</strong> Heterogeneous Photocatalysis, Peptide Linkages, Organic Synthesis Design.</p>
-                            <p><strong>Publications:</strong> High-impact international manuscripts tracking characterization sequences.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs">
-                        <div class="space-x-2 text-slate-400">
-                            <a href="#" class="hover:text-[#0B3D91]" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                            <a href="#" class="hover:text-[#0B3D91]" title="ORCID"><i class="fa-solid fa-id-card"></i></a>
-                        </div>
-                        <span class="text-[10px] font-mono font-medium text-slate-500">ashutosh@iirt.ac.in</span>
-                    </div>
+                <div class="bg-slate-50/60 p-8 rounded border border-slate-200/80 flex flex-col items-center text-center shadow-xs">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-[#0f2547] to-amber-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-sm"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 class="font-serif-title text-xl font-bold text-[#0b1c33]">Dr. Abhishek Tyagi</h4>
+                    <p class="text-amber-700 font-bold text-xs uppercase tracking-wider mt-0.5">Co-Founder & Chairman</p>
+                    <p class="text-[10px] text-slate-400 font-mono uppercase bg-white border border-slate-200 px-2 py-0.5 mt-2 rounded-xs">A2 Group Executive Management Board</p>
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal mt-3.5">Administering international laboratory allocations, industry-linked translational programs, corporate venture integrations, and central asset operational expansions.</p>
                 </div>
+            </div>
 
-                <!-- Profile Card 3 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between hover:border-[#D4AF37] transition">
-                    <div class="p-6 space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-14 h-14 bg-gradient-to-tr from-[#0B3D91] to-[#D4AF37] text-white rounded-full flex items-center justify-center text-lg font-bold"><i class="fa-solid fa-chart-line"></i></div>
-                            <div>
-                                <h4 class="font-heading font-bold text-base text-slate-900">Dr. Abhishek Tyagi</h4>
-                                <p class="text-[11px] text-[#D4AF37] font-bold uppercase tracking-wider">Visiting Scientist & Co-Founder</p>
-                            </div>
-                        </div>
-                        <div class="text-[11px] space-y-2 border-t border-slate-100 pt-3">
-                            <p><strong>Research Interests:</strong> High-Performance Computation Chemistry, Data Modeling Layers.</p>
-                            <p><strong>Publications:</strong> Strategic technical reports and global data optimization frameworks.</p>
-                        </div>
+            <div class="max-w-5xl mx-auto pt-10 border-t border-slate-200/80">
+                <h4 class="text-center text-[10px] uppercase tracking-widest font-black text-slate-400 mb-8">Proposed Core Faculty, Visiting Scientists & Research Advisors</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 bg-white rounded border border-slate-200 hover:shadow-xs transition text-center">
+                        <div class="font-serif-title font-bold text-sm text-[#0b1c33]">Prof. (Dr.) K. D. Das</div>
+                        <div class="text-[11px] text-amber-700 font-semibold uppercase tracking-wide mt-0.5">Principal Research Advisor</div>
+                        <div class="text-[10px] text-slate-400 mt-1.5 font-medium">Chemical Catalysis & Green Routes</div>
                     </div>
-                    <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs">
-                        <div class="space-x-2 text-slate-400">
-                            <a href="#" class="hover:text-[#0B3D91]" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                            <a href="#" class="hover:text-[#0B3D91]" title="ORCID"><i class="fa-solid fa-id-card"></i></a>
-                        </div>
-                        <span class="text-[10px] font-mono font-medium text-slate-500">abhishek@iirt.ac.in</span>
+                    <div class="p-4 bg-white rounded border border-slate-200 hover:shadow-xs transition text-center">
+                        <div class="font-serif-title font-bold text-sm text-[#0b1c33]">Dr. Kandi Ravi</div>
+                        <div class="text-[11px] text-amber-700 font-semibold uppercase tracking-wide mt-0.5">Visiting Scientist</div>
+                        <div class="text-[10px] text-slate-400 mt-1.5 font-medium">Formulation Sciences & Scaling</div>
+                    </div>
+                    <div class="p-4 bg-white rounded border border-slate-200 hover:shadow-xs transition text-center">
+                        <div class="font-serif-title font-bold text-sm text-[#0b1c33]">Dr. Priyadarshini Sen</div>
+                        <div class="text-[11px] text-amber-700 font-semibold uppercase tracking-wide mt-0.5">Proposed Faculty Head</div>
+                        <div class="text-[10px] text-slate-400 mt-1.5 font-medium">Spectroscopic Structural Mapping</div>
+                    </div>
+                    <div class="p-4 bg-white rounded border border-slate-200 hover:shadow-xs transition text-center">
+                        <div class="font-serif-title font-bold text-sm text-[#0b1c33]">Dr. Rajesh K. Nair</div>
+                        <div class="text-[11px] text-amber-700 font-semibold uppercase tracking-wide mt-0.5">Advisory Consultant</div>
+                        <div class="text-[10px] text-slate-400 mt-1.5 font-medium">Condensed Matter Processing</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Facilities Page Section Layout -->
+    <section id="schools" class="py-16 bg-slate-50 px-6 md:px-16 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-sm">Academic Organization</span>
+                <h3 class="font-serif-title text-3xl font-bold text-[#0b1c33] mt-2">Specialized Research Schools</h3>
+                <p class="text-xs text-slate-500 mt-2 font-normal leading-relaxed">Divisions designed around core post-graduate and doctoral specialization parameters.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded border border-slate-200/80 p-6 flex flex-col justify-between shadow-xs">
+                    <div>
+                        <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4 mb-4">
+                            <span class="bg-amber-50 text-amber-900 p-2.5 rounded border border-amber-200/40 text-sm"><i class="fa-solid fa-flask"></i></span>
+                            <h4 class="font-serif-title font-bold text-[#0b1c33] text-base">School of Chemical Sciences</h4>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-amber-500 text-[9px] mr-2.5"></i>Organic Synthesis (Heterogeneous Photocatalysis)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-amber-500 text-[9px] mr-2.5"></i>Medicinal Chemistry & Peptide Frameworks</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-amber-500 text-[9px] mr-2.5"></i>Spectroscopy (FTIR, NMR Data Resolution)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-amber-500 text-[9px] mr-2.5"></i>Materials Chemistry & Semiconductor Controls</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded border border-slate-200/80 p-6 flex flex-col justify-between shadow-xs">
+                    <div>
+                        <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4 mb-4">
+                            <span class="bg-indigo-50 text-indigo-900 p-2.5 rounded border border-indigo-200/40 text-sm"><i class="fa-solid fa-atom"></i></span>
+                            <h4 class="font-serif-title font-bold text-[#0b1c33] text-base">School of Physical Sciences</h4>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-indigo-500 text-[9px] mr-2.5"></i>Condensed Matter Physics (Experimental)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-indigo-500 text-[9px] mr-2.5"></i>Photonics & Spectroscopy Arrays</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-indigo-500 text-[9px] mr-2.5"></i>Computational Quantum Physics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded border border-slate-200/80 p-6 flex flex-col justify-between shadow-xs">
+                    <div>
+                        <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4 mb-4">
+                            <span class="bg-emerald-50 text-emerald-900 p-2.5 rounded border border-emerald-200/40 text-sm"><i class="fa-solid fa-calculator"></i></span>
+                            <h4 class="font-serif-title font-bold text-[#0b1c33] text-base">School of Mathematical Sciences</h4>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-emerald-500 text-[9px] mr-2.5"></i>Applied Mathematics & Numerical Analysis</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-emerald-500 text-[9px] mr-2.5"></i>Data Science & Statistical Matrices</li>
+                            <li class="flex items-center"><i class="fa-solid fa-chevron-right text-emerald-500 text-[9px] mr-2.5"></i>Mathematical Modeling & Fluid Dynamics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="facilities" class="py-16 bg-white px-6 md:px-16 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Analytical Assets</span>
-                <h3 class="font-heading text-3xl font-bold text-slate-900 mt-1">Core Infrastructure & Instrumentation</h3>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Providing high-resolution diagnostic configurations to generate verifiable experimental datasets.</p>
+                <span class="text-[10px] font-bold text-indigo-900 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-sm">Analytical Architecture</span>
+                <h3 class="font-serif-title text-3xl font-bold text-[#0b1c33] mt-2">Central Research Instrumentation Facility</h3>
+                <p class="text-xs text-slate-500 mt-2 font-normal leading-relaxed">Providing high-end analytical characterization configurations to enable publication-grade data validation metrics.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <div class="p-5 border border-slate-200 rounded text-center bg-slate-50/60 shadow-2xs">
-                    <div class="text-lg font-bold text-[#0B3D91] mb-1">NMR Spectroscopy</div>
-                    <p class="text-[10px] text-slate-500 font-medium">500 MHz high-resolution magnetic orientation structural tracking arrays.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 font-sans shadow-2xs bg-slate-50 p-6 rounded border border-slate-200">
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">500 MHz</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">NMR Spectroscopy</div>
                 </div>
-                <div class="p-5 border border-slate-200 rounded text-center bg-slate-50/60 shadow-2xs">
-                    <div class="text-lg font-bold text-[#0B3D91] mb-1">Chromatography</div>
-                    <p class="text-[10px] text-slate-500 font-medium">High-Performance LC-MS/MS and functional GC-MS separation panels.</p>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">LC-MS/MS</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Liquid Spec Array</div>
                 </div>
-                <div class="p-5 border border-slate-200 rounded text-center bg-slate-50/60 shadow-2xs">
-                    <div class="text-lg font-bold text-[#0B3D91] mb-1">Computational Facility</div>
-                    <p class="text-[10px] text-slate-500 font-medium">HPC clusters running structured modeling parameters for molecular pathways.</p>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">GC-MS</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Gas Chromatography</div>
                 </div>
-                <div class="p-5 border border-slate-200 rounded text-center bg-slate-50/60 shadow-2xs">
-                    <div class="text-lg font-bold text-[#0B3D91] mb-1">Research Laboratories</div>
-                    <p class="text-[10px] text-slate-500 font-medium">Advanced synthesis hoods engineered to execute organic green transformations safely.</p>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">HPLC</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">High-Performance Liquid</div>
                 </div>
-                <div class="p-5 border border-slate-200 rounded text-center bg-slate-50/60 shadow-2xs">
-                    <div class="text-lg font-bold text-[#0B3D91] mb-1">Seminar Hall</div>
-                    <p class="text-[10px] text-slate-500 font-medium">Equipped presentation center hosting weekly symposium tracks and thesis defenses.</p>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">FTIR</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Infrared Tracking</div>
+                </div>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">UV-Vis</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Absorber Matrix</div>
+                </div>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">XRD Array</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">X-Ray Diffraction</div>
+                </div>
+                <div class="p-4 bg-white border border-slate-200 rounded-sm text-center">
+                    <div class="text-xl font-black text-[#0b1c33]">HPC Cluster</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Computational Chemistry</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. News & Announcements Panel -->
-    <section id="news" class="py-16 bg-slate-50 px-6 md:px-16 border-b border-slate-200/60">
+    <section id="publications" class="py-16 bg-slate-50 px-6 md:px-16 border-b border-slate-200/60">
         <div class="max-w-7xl mx-auto">
-            <h3 class="font-heading text-xl font-bold text-slate-900 border-b border-slate-200 pb-3 mb-8"><i class="fa-solid fa-bullhorn text-[#D4AF37] mr-2"></i>Institutional Announcements Desk</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                <div class="bg-white p-5 rounded border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[9px] text-red-600 font-bold block mb-1">Admissions</span>
-                        <h5 class="font-heading font-semibold text-xs text-slate-900 mb-2">Admission Open</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Autumn semester cohort registration portals are operational.</p>
-                    </div>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-[10px] font-bold text-amber-700 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-sm">IP Repositories</span>
+                <h3 class="font-serif-title text-3xl font-bold text-[#0b1c33] mt-2">Publications & Research Outputs</h3>
+                <p class="text-xs text-slate-500 mt-2 font-normal leading-relaxed">Tracking structural academic outputs across standard international scientific distribution indexes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-sans">
+                <div class="bg-white p-5 rounded border border-slate-200 shadow-2xs">
+                    <div class="text-[#0b1c33] text-lg font-bold flex items-center mb-2"><i class="fa-solid fa-file-invoice text-amber-600 mr-2"></i>Journal Articles</div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Peer-reviewed manuscripts cataloged across major high-impact international citation indices.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[9px] text-blue-600 font-bold block mb-1">Symposiums</span>
-                        <h5 class="font-heading font-semibold text-xs text-slate-900 mb-2">Workshops 2026</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Analytical spectral resolution training scheduled next month.</p>
-                    </div>
+                <div class="bg-white p-5 rounded border border-slate-200 shadow-2xs">
+                    <div class="text-[#0b1c33] text-lg font-bold flex items-center mb-2"><i class="fa-solid fa-chalkboard-user text-amber-600 mr-2"></i>Conference Papers</div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Proceedings presented across apex global engineering conventions and strategic symposium fields.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[9px] text-amber-700 font-bold block mb-1">Internships</span>
-                        <h5 class="font-heading font-semibold text-xs text-slate-900 mb-2">Summer Internships</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed"> флагман fully-mentored core summer research tracks processing validations.</p>
-                    </div>
+                <div class="bg-white p-5 rounded border border-slate-200 shadow-2xs">
+                    <div class="text-[#0b1c33] text-lg font-bold flex items-center mb-2"><i class="fa-solid fa-certificate text-amber-600 mr-2"></i>Patents Filed</div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Intellectual property filings protecting novel photocatalysts and structural material frameworks.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[9px] text-emerald-600 font-bold block mb-1">Faculty News</span>
-                        <h5 class="font-heading font-semibold text-xs text-slate-900 mb-2">Faculty Achievements</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Board members recognized for high citation volume contributions.</p>
-                    </div>
+                <div class="bg-white p-5 rounded border border-slate-200 shadow-2xs">
+                    <div class="text-[#0b1c33] text-lg font-bold flex items-center mb-2"><i class="fa-solid fa-book text-amber-600 mr-2"></i>Book Chapters</div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Comprehensive reference textbooks published under prominent global scientific distribution groups.</p>
                 </div>
-                <div class="bg-white p-5 rounded border border-slate-200 flex flex-col justify-between">
+            </div>
+        </div>
+    </section>
+
+    <section id="fellowship" class="py-16 bg-white px-6 md:px-16 border-b border-slate-200/60">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-[#0b1c33] to-[#040c17] rounded shadow-xl text-white p-8 md:p-12 relative overflow-hidden border-l-4 border-amber-500">
+            <div class="relative z-10 max-w-3xl space-y-4">
+                <span class="bg-amber-500 text-slate-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-sm">National Internship Track</span>
+                <h3 class="font-serif-title text-2xl md:text-3xl font-bold text-white">IIRT Summer Research Fellowship (ISRF)</h3>
+                <p class="text-slate-300 text-xs md:text-sm font-light leading-relaxed font-sans">
+                    An intensive, fully-mentored technical laboratory integration structure designed to introduce exceptional post-graduate and graduate candidates to computational modeling frameworks, organic functional synthesis paths, and crystal data diagnostics.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-800/80 font-sans">
                     <div>
-                        <span class="text-[9px] text-indigo-600 font-bold block mb-1">Grants</span>
-                        <h5 class="font-heading font-semibold text-xs text-slate-900 mb-2">Research Grants</h5>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Core developmental funding authorized for materials advancement labs.</p>
+                        <h5 class="text-amber-400 font-bold text-[10px] uppercase tracking-wider"><i class="fa-solid fa-clock mr-1.5"></i>Duration</h5>
+                        <p class="text-xs font-semibold text-slate-200 mt-1">6 to 8 Weeks Continuous</p>
+                    </div>
+                    <div>
+                        <h5 class="text-amber-400 font-bold text-[10px] uppercase tracking-wider"><i class="fa-solid fa-layer-group mr-1.5"></i>Target Fields</h5>
+                        <p class="text-xs font-semibold text-slate-200 mt-1">Chemistry, Physics & Mathematics</p>
+                    </div>
+                    <div>
+                        <h5 class="text-amber-400 font-bold text-[10px] uppercase tracking-wider"><i class="fa-solid fa-gift mr-1.5"></i>ISRF Stipend Benefits</h5>
+                        <p class="text-[11px] text-slate-300 mt-1">Certificate, Direct Mentor Support & Access to Core Instrumentation Facilities</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10. Collaborations Panel -->
-    <section class="py-12 bg-white px-6 md:px-16 border-b border-slate-200/60 text-center">
-        <div class="max-w-7xl mx-auto">
-            <h5 class="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-6">Research Collaborations & Linkages</h5>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-semibold tracking-wide text-slate-600">
-                <div class="p-4 bg-slate-50 rounded border border-slate-200/60"><i class="fa-solid fa-building mr-2 text-[#0B3D91]"></i>National Advanced Laboratories</div>
-                <div class="p-4 bg-slate-50 rounded border border-slate-200/60"><i class="fa-solid fa-graduation-cap mr-2 text-[#0B3D91]"></i>Apex Global Universities</div>
-                <div class="p-4 bg-slate-50 rounded border border-slate-200/60"><i class="fa-solid fa-industry mr-2 text-[#0B3D91]"></i>Translational Corporate Alliances</div>
+    <section id="admissions" class="py-16 bg-[#0f2547] text-white px-6 md:px-16 border-b border-indigo-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block"><i class="fa-solid fa-shield-halved mr-1.5"></i> Central Admission Council</span>
+                <h3 class="font-serif-title text-3xl font-bold text-white">Institutional Selection Criteria</h3>
+                <p class="text-xs text-slate-300 font-light leading-relaxed">
+                    IIRT Hyderabad runs coordinated entries across all branches through standard national merit criteria to match premium academic setups like IITs and IISc:
+                </p>
+                
+                <div class="space-y-4 font-sans text-xs">
+                    <div class="bg-slate-950/40 p-4 rounded border-l-2 border-amber-500">
+                        <span class="font-bold text-amber-400 block uppercase tracking-wider">National Examination Alignment</span>
+                        <p class="text-slate-300 mt-1">Primary evaluations across PG allocations map strictly through verified multi-tier scores like IIT-JAM or GATE score lines.</p>
+                    </div>
+                    <div class="bg-slate-950/40 p-4 rounded border-l-2 border-indigo-400">
+                        <span class="font-bold text-indigo-300 block uppercase tracking-wider">Merit-Based Selection Processing</span>
+                        <p class="text-slate-300 mt-1">Cumulative score tracking checks academic records and exam ranks to remove administrative partiality during seat distribution.</p>
+                    </div>
+                    <div class="bg-slate-950/40 p-4 rounded border-l-2 border-red-500">
+                        <span class="font-bold text-red-400 block uppercase tracking-wider">Doctoral PhD Comprehensive Panel Reviews</span>
+                        <p class="text-slate-300 mt-1">PhD candidates require national fellowships (CSIR-UGC NET JRF, GATE, DBT-BET) followed by an interview before the Board of Advisors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white text-slate-800 p-8 rounded border border-slate-200 shadow-xl font-sans">
+                <h4 class="font-serif-title font-bold text-lg text-[#0b1c33] mb-1">Admission Registry Desk</h4>
+                <p class="text-xs text-slate-400 mb-6 font-normal">Queue validation parameters to the Central Registrar Desk.</p>
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Verification packet queued for validation.');">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-600 mb-1">Full Applicant Name</label>
+                        <input type="text" class="w-full border border-slate-200 rounded-sm p-2.5 text-xs focus:outline-none focus:border-[#0f2547]" placeholder="As in transcript credentials" required>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-600 mb-1">National Level Rank / Score</label>
+                            <input type="text" class="w-full border border-slate-200 rounded-sm p-2.5 text-xs bg-amber-50/40 focus:outline-none focus:border-[#0f2547]" placeholder="e.g. GATE/JAM Score" required>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase text-slate-600 mb-1">Target Curriculum</label>
+                            <select class="w-full border border-slate-200 rounded-sm p-2.5 text-xs bg-white focus:outline-none focus:border-[#0f2547]">
+                                <option>PG - M.Sc. Chemistry (IIT-JAM)</option>
+                                <option>PG - M.Sc. Physics / Mathematics</option>
+                                <option>Ph.D. - Chemical Sciences (NET JRF/GATE)</option>
+                                <option>Ph.D. - Physical / Mathematical / Biological</option>
+                                <option>ISRF - Summer Fellowship Application</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-slate-600 mb-1">Clarification Query Packet</label>
+                        <textarea rows="3" class="w-full border border-slate-200 rounded-sm p-2.5 text-xs focus:outline-none focus:border-[#0f2547]" placeholder="Specify alignment query details..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#0f2547] hover:bg-[#163566] text-white text-xs font-bold uppercase tracking-wider py-3.5 rounded shadow-xs transition-colors">Submit to Admissions Desk</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Administrative Metrics: Fee Profiles Mapping -->
-    <section id="examination" class="py-14 max-w-7xl mx-auto px-6 font-sans">
-        <h4 class="text-center font-heading font-bold text-xl text-slate-900 mb-6">Approved Semestral Fee Matrices</h4>
-        <div class="overflow-x-auto rounded-lg border border-slate-200 shadow-2xs">
-            <table class="w-full text-left border-collapse bg-white text-xs">
+    <section class="py-12 bg-white px-6 md:px-16 border-b border-slate-200/60">
+        <div class="max-w-7xl mx-auto text-center font-sans">
+            <h5 class="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-6">Strategic Collaborations & Academic Alliances</h5>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-slate-600 font-bold text-xs tracking-wide">
+                <div class="p-4 bg-slate-50/60 rounded border border-slate-200/60"><i class="fa-solid fa-university text-[#0f2547] mr-2 text-sm"></i>Apex Research Universities</div>
+                <div class="p-4 bg-slate-50/60 rounded border border-slate-200/60"><i class="fa-solid fa-vials text-[#0f2547] mr-2 text-sm"></i>National Laboratories</div>
+                <div class="p-4 bg-slate-50/60 rounded border border-slate-200/60"><i class="fa-solid fa-industry text-[#0f2547] mr-2 text-sm"></i>Translational Corporate Entities</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
+        <div id="research" class="bg-white p-6 rounded border border-slate-200 shadow-2xs flex flex-col justify-between">
+            <div>
+                <div class="text-[#0f2547] text-xl mb-3"><i class="fa-solid fa-dna"></i></div>
+                <h4 class="font-serif-title font-bold text-base text-[#0b1c33] mb-2">Research & Development Cell</h4>
+                <p class="text-slate-600 text-xs leading-relaxed mb-4">Managing industrial scaling patents, funding clearances, and infrastructure updates overseen by the Director's panel.</p>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-900 bg-indigo-50 px-2.5 py-1 rounded-sm w-max">Chair: Dr. Ashutosh Dhal</span>
+        </div>
+        <div id="examination" class="bg-white p-6 rounded border border-slate-200 shadow-2xs flex flex-col justify-between">
+            <div>
+                <div class="text-[#0f2547] text-xl mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4 class="font-serif-title font-bold text-base text-[#0b1c33] mb-2">Autonomous Examination Cell</h4>
+                <p class="text-slate-600 text-xs leading-relaxed mb-4">Autonomous assessment cell handling central evaluations, grading profiles, and terminal transcript registry controls.</p>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-900 bg-indigo-50 px-2.5 py-1 rounded-sm w-max">Board Regulated</span>
+        </div>
+        <div id="anti-ragging" class="bg-white p-6 rounded border border-slate-200 shadow-2xs flex flex-col justify-between">
+            <div>
+                <div class="text-red-700 text-xl mb-3"><i class="fa-solid fa-gavel"></i></div>
+                <h4 class="font-serif-title font-bold text-base text-[#0b1c33] mb-2">Anti-Ragging Safety Committee</h4>
+                <p class="text-slate-600 text-xs leading-relaxed mb-4">Strict enforcement of safety mandates following statutory guidelines to guarantee inclusive working environments.</p>
+            </div>
+            <span class="text-[9px] font-black uppercase tracking-wider text-red-700 bg-red-50 px-2.5 py-1 rounded-sm w-max">24/7 Helpline Monitored</span>
+        </div>
+    </section>
+
+    <section id="fees" class="py-16 px-6 md:px-16 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h3 class="font-serif-title text-3xl font-bold text-[#0b1c33]">Approved Operational Fee Structure</h3>
+            <p class="text-xs text-slate-500 mt-2 font-normal leading-relaxed">Per-semester operational fee metrics. Base cost profiles are anchored uniformly at INR 6,000,000.</p>
+        </div>
+        <div class="overflow-x-auto rounded border border-slate-200 shadow-sm bg-white font-sans">
+            <table class="w-full text-left border-collapse">
                 <thead>
-                    <tr class="bg-[#0B3D91] text-white uppercase text-[10px] tracking-wider">
-                        <th class="p-4 font-bold">Academic Department / Subdivision</th>
-                        <th class="p-4 font-bold">Tuition Base Cost</th>
-                        <th class="p-4 font-bold text-right">Total Per Semester Charge</th>
+                    <tr class="bg-[#0f2547] text-white text-[10px] tracking-wider uppercase">
+                        <th class="p-4 font-bold">Academic Department / Institutional School</th>
+                        <th class="p-4 font-bold">Tuition Cost (Per Sem)</th>
+                        <th class="p-4 font-bold">Lab Infrastructure Levy</th>
+                        <th class="p-4 font-bold text-right">Total Semester Cost</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-100 text-slate-700">
-                    <tr class="bg-amber-50/30">
-                        <td class="p-4 font-bold text-slate-900"><i class="fa-solid fa-star text-[#D4AF37] mr-2"></i>Department of Cosmetics (Flagship Division)</td>
+                <tbody class="text-xs divide-y divide-slate-100 text-slate-700">
+                    <tr class="bg-amber-50/40">
+                        <td class="p-4 text-[#0b1c33] font-bold"><i class="fa-solid fa-star text-amber-500 mr-2"></i>Department of Cosmetics (Flagship Tier)</td>
                         <td class="p-4">₹5,50,000</td>
-                        <td class="p-4 text-right font-bold text-slate-900">₹6,00,000 INR</td>
+                        <td class="p-4">₹50,000</td>
+                        <td class="p-4 text-right font-black text-[#0b1c33]">₹6,00,000 INR</td>
                     </tr>
                     <tr>
-                        <td class="p-4 font-medium">Post-Graduate Division: M.Sc. Tracks</td>
+                        <td class="p-4 font-semibold">School of Computer Science & Engineering</td>
+                        <td class="p-4">₹6,20,000</td>
+                        <td class="p-4">₹60,000</td>
+                        <td class="p-4 text-right font-black text-[#0b1c33]">₹6,80,000 INR</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-semibold">Post-Graduate Division: M.Sc. Chemistry / Physics</td>
                         <td class="p-4">₹5,40,000</td>
-                        <td class="p-4 text-right font-bold text-slate-900">₹6,00,000 INR</td>
+                        <td class="p-4">₹60,000</td>
+                        <td class="p-4 text-right font-black text-[#0b1c33]">₹6,00,000 INR</td>
                     </tr>
                     <tr>
-                        <td class="p-4 font-medium">Doctoral Framework: Ph.D. Core Sciences</td>
+                        <td class="p-4 font-semibold">School of Electrical & Electronic Systems</td>
+                        <td class="p-4">₹5,90,000</td>
+                        <td class="p-4">₹40,000</td>
+                        <td class="p-4 text-right font-black text-[#0b1c33]">₹6,30,000 INR</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-semibold">Doctoral Division: Ph.D. Core Sciences</td>
                         <td class="p-4">₹5,60,000</td>
-                        <td class="p-4 text-right font-bold text-slate-900">₹6,00,000 INR</td>
+                        <td class="p-4">₹40,000</td>
+                        <td class="p-4 text-right font-black text-[#0b1c33]">₹6,00,000 INR</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- 11. Interactive Contact Desk & Admissions Entry Registry Form -->
-    <section id="contact" class="py-16 bg-[#062456] text-white px-6 md:px-16 border-b border-[#03132B]">
-        <div id="admissions-form" class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-4">
-                <span class="text-[#D4AF37] font-bold text-xs uppercase tracking-widest block">Central Admissions Matrix</span>
-                <h3 class="font-heading text-3xl font-bold text-white">Registry Processing Portal</h3>
-                <p class="text-xs text-slate-300 leading-relaxed font-light">
-                    Submit verified credentials to the Central Registrar Desk queue framework. All entry packets require valid national assessment identifiers to proceed through institutional evaluations.
-                </p>
-                <div class="space-y-3 font-sans text-xs">
-                    <div class="p-3.5 bg-[#03132B]/60 rounded border-l-2 border-[#D4AF37]">
-                        <strong>Exam Alignment:</strong> Ranks must cross minimum verification metrics.
-                    </div>
-                    <div class="p-3.5 bg-[#03132B]/60 rounded border-l-2 border-slate-400">
-                        <strong>Review Interviews:</strong> Shortlisted profiles are called before the Academic Council.
-                    </div>
-                </div>
+    <section id="login" class="py-16 bg-slate-100 px-6 flex justify-center items-center border-t border-slate-200">
+        <div class="bg-white p-8 rounded border border-slate-200 shadow-md w-full max-w-md font-sans">
+            <div class="text-center mb-6">
+                <div class="inline-flex p-3 bg-slate-50 text-[#0f2547] text-xl rounded-full mb-2 border border-slate-200/80"><i class="fa-solid fa-fingerprint"></i></div>
+                <h4 class="font-serif-title font-bold text-lg text-[#0b1c33]">Student Login Portal</h4>
+                <p class="text-xs text-slate-400 mt-1">Access secure academic ERP repositories, metrics and profiles.</p>
             </div>
-
-            <!-- Form Frame -->
-            <div class="bg-white text-slate-800 p-8 rounded-lg shadow-xl border border-slate-200">
-                <h4 class="font-heading font-bold text-base text-slate-900 mb-4">Admissions Verification Entry</h4>
-                <form class="space-y-4 text-xs font-medium" onsubmit="event.preventDefault(); alert('Packet queued.');">
-                    <div>
-                        <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">Applicant Name</label>
-                        <input type="text" class="w-full border border-slate-200 rounded p-2.5 focus:outline-none focus:border-[#0B3D91]" placeholder="As in official records" required>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">National Exam Score / Rank</label>
-                            <input type="text" class="w-full border border-slate-200 rounded p-2.5 bg-amber-50/40 focus:outline-none focus:border-[#0B3D91]" placeholder="e.g. GATE-3080 / JAM" required>
-                        </div>
-                        <div>
-                            <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">Program Track Selection</label>
-                            <select class="w-full border border-slate-200 rounded p-2.5 bg-white focus:outline-none focus:border-[#0B3D91]">
-                                <option>PG - M.Sc. Chemical Sciences</option>
-                                <option>Ph.D. - Direct Fellowship Admission</option>
-                                <option>ISRF - Flagship Summer Fellowship</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">Core Query Message</label>
-                        <textarea rows="3" class="w-full border border-slate-200 rounded p-2.5 focus:outline-none focus:border-[#0B3D91]" placeholder="Specify focus track queries..." required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-[#0B3D91] hover:bg-[#062456] text-white font-bold uppercase tracking-wider py-3 rounded transition">Submit to Registrar</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secure ERP Identification Component Layer -->
-    <section id="login" class="py-16 bg-slate-100 px-6 flex justify-center items-center">
-        <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm w-full max-w-sm text-xs font-medium">
-            <div class="text-center mb-5">
-                <h4 class="font-heading font-bold text-base text-slate-900">Secure Student ERP Access</h4>
-                <p class="text-[11px] text-slate-400 mt-0.5">Enter credentials to authenticate institutional logs.</p>
-            </div>
-            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Authentication active.');">
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Authentication validation protocols active.');">
                 <div>
-                    <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">Student ID String</label>
-                    <input type="text" class="w-full border border-slate-200 rounded p-2.5 focus:outline-none focus:border-[#0B3D91]" placeholder="IIRT/COS/2026/012" required>
+                    <label class="block text-[10px] font-bold text-slate-600 uppercase mb-1">Id Tracking Number</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs"><i class="fa-solid fa-id-badge"></i></span>
+                        <input type="text" class="w-full border border-slate-200 rounded-sm pl-9 pr-3 py-2 text-xs focus:outline-none focus:border-[#0f2547]" placeholder="IIRT/COS/2026/012" required>
+                    </div>
                 </div>
                 <div>
-                    <label class="block text-[10px] text-slate-500 uppercase font-bold mb-1">Private Keyphrase</label>
-                    <input type="password" class="w-full border border-slate-200 rounded p-2.5 focus:outline-none focus:border-[#0B3D91]" placeholder="••••••••" required>
+                    <label class="block text-[10px] font-bold text-slate-600 uppercase mb-1">Security Keyphrase</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 text-xs"><i class="fa-solid fa-key"></i></span>
+                        <input type="password" class="w-full border border-slate-200 rounded-sm pl-9 pr-3 py-2 text-xs focus:outline-none focus:border-[#0f2547]" placeholder="••••••••" required>
+                    </div>
                 </div>
-                <button type="submit" class="w-full bg-[#03132B] hover:bg-[#062456] text-white font-bold uppercase tracking-wider py-2.5 rounded transition">Authenticate Token</button>
+                <button type="submit" class="w-full bg-[#0f2547] hover:bg-[#163566] text-white text-xs font-bold uppercase tracking-wider py-3 rounded shadow-xs transition-colors">Authenticate Roll Profile</button>
             </form>
         </div>
     </section>
 
-    <!-- 10. Upgraded Footer with Links, Maps, and Social Hooks -->
-    <footer class="bg-[#03132B] text-slate-400 text-xs py-14 px-6 md:px-16 border-t-4 border-[#D4AF37]">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
-            <!-- Col 1: Brand Info -->
+    <footer class="bg-[#061224] text-slate-400 text-xs py-14 px-6 md:px-16 border-t-4 border-amber-500 font-sans">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div class="space-y-3">
-                <h5 class="font-heading text-sm font-bold text-white tracking-wide">IIRT Hyderabad</h5>
-                <p class="leading-relaxed font-light text-slate-400">
-                    A premier autonomous research institute portal engineered to execute advanced cross-disciplinary academic initiatives.
+                <h5 class="font-serif-title text-sm font-bold text-white tracking-wide">IIRT Hyderabad</h5>
+                <p class="leading-relaxed text-slate-400 font-light">
+                    An advanced stand-alone engineering and post-graduate scientific research framework working under the direct industrial oversight of A2 Group of Pvt. Limited.
                 </p>
-                <div class="flex space-x-3 text-sm pt-2">
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors" title="Institutional Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors" title="Institutional X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors" title="Institutional LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
             </div>
-            <!-- Col 2: Quick Links -->
             <div class="space-y-3">
-                <h5 class="font-heading text-sm font-bold text-white tracking-wide">Quick Links</h5>
+                <h5 class="font-serif-title text-sm font-bold text-white tracking-wide">Statutory Registers</h5>
                 <ul class="space-y-2 text-xs font-medium">
-                    <li><a href="#about" class="hover:text-white transition-colors">Institutional Profile</a></li>
-                    <li><a href="#divisions" class="hover:text-white transition-colors">Research Divisions Mapping</a></li>
-                    <li><a href="#faculty" class="hover:text-white transition-colors">Core Faculty Directories</a></li>
-                    <li><a href="#facilities" class="hover:text-white transition-colors">Central Instrumentation Facility</a></li>
+                    <li><a href="#research" class="hover:text-white transition-colors">Research & Development Office</a></li>
+                    <li><a href="#examination" class="hover:text-white transition-colors">Autonomous Examination Board</a></li>
+                    <li><a href="#admissions" class="hover:text-white transition-colors">Central Admissions Desk</a></li>
+                    <li><a href="#anti-ragging" class="hover:text-white transition-colors">Anti-Ragging Committee Matrix</a></li>
                 </ul>
             </div>
-            <!-- Col 3: Contact Info -->
             <div class="space-y-3">
-                <h5 class="font-heading text-sm font-bold text-white tracking-wide">Contact Information</h5>
+                <h5 class="font-serif-title text-sm font-bold text-white tracking-wide">Campus Address</h5>
                 <p class="leading-relaxed font-light">
-                    <strong>Campus:</strong> Gachibowli Tech-Innovation Block, Hyderabad, Telangana - 500032, India<br>
-                    <strong>Email Desk:</strong> registrar@iirt.ac.in
+                    Tech-Innovation Campus,<br>Gachibowli, Hyderabad,<br>Telangana - 500032, India
                 </p>
             </div>
-            <!-- Col 4: Google Map Embed Placeholder Framework -->
-            <div class="space-y-2">
-                <h5 class="font-heading text-sm font-bold text-white tracking-wide">Google Map Campus Location</h5>
-                <div class="w-full h-24 rounded overflow-hidden border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-600">
-                    <i class="fa-solid fa-map-location-dot text-2xl mr-2 text-slate-700"></i>
-                    <span class="text-[10px] uppercase font-bold tracking-wider font-heading">Map Context Active</span>
-                </div>
-            </div>
         </div>
-        <div class="max-w-7xl mx-auto border-t border-slate-900 pt-6 text-center text-[10px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p>&copy; 2026 Indian Institute of Interdisciplinary Research and Technology (IIRT), Hyderabad. All Rights Reserved.</p>
-            <p class="font-mono text-slate-600">Executive Structure Operations | Co-Founders: Dr. Ashutosh Dhal & Dr. Abhishek Tyagi</p>
+        <div class="max-w-7xl mx-auto border-t border-slate-900 pt-8 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+            <p>&copy; 2026 Indian Institute of Research and Technology (IIRT), Hyderabad. All Rights Reserved.</p>
+            <p class="text-[10px] font-mono text-slate-600">Executive Management Board Framework | Owners: Dr. Ashutosh Dhal & Dr. Abhishek Tyagi</p>
         </div>
     </footer>
 
-    <!-- 7. Structural Toggle Navigation Script Logic for Dropdown Configurations -->
     <script>
-        // Structural validation checks for script components
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("IIRT Institutional Portal Core Structure successfully instantiated.");
+        const menuBtn = document.getElementById('menuBtn');
+        const menuDropdown = document.getElementById('menuDropdown');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuDropdown.contains(e.target) && e.target !== menuBtn) {
+                menuDropdown.classList.remove('show');
+            }
         });
     </script>
 
